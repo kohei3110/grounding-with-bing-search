@@ -2,7 +2,18 @@
 
 ## できること
 
+```mermaid
+sequenceDiagram
+    participant Client as クライアント
+    participant Server as サーバー
+    participant Bing as Bing検索
 
+    Client->>Server: 質問を送信
+    Server->>Bing: 関連情報を検索
+    Bing-->>Server: 検索結果を返却
+    Server->>Server: 回答を生成
+    Server-->>Client: 回答を返却
+```
 
 ## 実行手順
 
